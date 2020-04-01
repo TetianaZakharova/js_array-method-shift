@@ -6,7 +6,7 @@
 function applyCustomShift() {
   [].__proto__.shift2 = function() {
     const items = this;
-    const firstItem = items[0];
+    const shiftItem = items[0];
 
     if (items.length > 0) {
       for (let i = 0; i < items.length; i++) {
@@ -15,7 +15,7 @@ function applyCustomShift() {
       items.length--;
     }
 
-    return firstItem;
+    return shiftItem;
   };
 }
 
